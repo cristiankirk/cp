@@ -1,0 +1,55 @@
+@media only screen and (max-width: 1500px) { #app { width:80%;  } } 
+@media only screen and (max-width: 1200px) { #app { width:90%;  } } 
+@media only screen and (max-width: 900px)  {
+  #app { width:100%; padding:0; }
+  header {
+    height: 45px;
+    padding:10px;
+    background-color:#fff;
+  }
+  header img {
+    object-fit: cover;
+    height: 25px;
+    object-position: bottom;
+  }
+
+
+  #navButtonContainer {
+    transform: scale(0.7);
+    position: absolute;
+    right: 5px;
+    top: -12px;
+  }
+
+  .featured1_container img {display:none;}
+  #featured2 {
+    display:block;
+  }
+  #featured2 div.featured2_container {
+    width:100%;
+    border-bottom:1px solid #333;
+  } 
+  main #sidebar {
+    display:none;
+  }
+  main #posts {
+    width:100%;
+  }
+  #navCategorias {
+    top: -2px;
+    transform: scale(0.8);
+    right: -7px;
+  }
+
+  #titulo {
+    width:100%;
+  }
+
+  footer {
+    gap:25px;
+  }
+
+  footer .categorias {
+    display:none;
+  }
+}

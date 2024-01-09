@@ -1,0 +1,180 @@
+header {
+    border-bottom:1px solid var(--colorLineaSeparadora);
+}
+
+
+#categoria {
+    margin-top:10px;
+    color:#888;
+}
+
+#fecha {
+    margin-top:10px;
+    color:#888;
+    font-weight:normal;
+    font-size:10pt;
+}
+
+#titulo {
+    padding:10px 0 20px 0;
+    font-size:26pt;
+    font-weight:bold;
+    width:75%;
+}
+
+#content {
+    font-size:13pt;
+}
+
+#content p {
+    line-height:1.5em;
+    text-align: justify;
+    margin-bottom:20px;
+    max-width:75ch;
+}
+
+#imagen {
+    float:left;
+    width:400px;
+}
+
+mark {
+    background-color:var(--color7);
+    color:var(--color2);
+}
+
+h4.wp-block-heading {
+    margin-top:40px;    
+    margin-bottom:20px;
+    font-size:16pt;
+    font-weight:normal;
+}
+
+pre.wp-block-verse {
+    line-height:1.5em;
+    text-align: justify;
+    white-space:pre-wrap;
+    max-width:75ch;
+    font-family:var(--font);
+    color:var(--color3);
+    background-color:var(--color8);
+    padding:10px;
+    border-radius:5px;
+}
+
+figure.wp-block-image {
+    margin-top:1rem;
+    margin-bottom:1rem;
+    width:75ch;
+    border:1px solid #ccc;
+    padding:1rem;
+}
+
+figure.wp-block-image img {
+    width:100%;
+    margin-bottom:0.5rem;
+}
+
+figcaption.wp-element-caption {
+    font-size: 11pt;
+}
+
+article {
+    border-bottom:1px solid var(--colorLineaSeparadora);
+    margin-bottom:10px;
+}
+
+.volanta {
+    float:right;        
+}
+
+.imagen {
+    width:40%;
+    float:right;
+    margin:1rem;
+    margin-top:0;
+}
+
+#relatedPosts {
+    margin-top:2rem;
+    padding-top:1rem;
+}
+
+.relatedPosts_header {
+    background-color: var(--colorBackRelatedPostsHeader);
+    color: var(--colorFrontRelatedPostsHeader);
+    padding:1rem;
+}
+
+
+.relatedPost {
+    padding:1rem;
+    padding-left:0.5rem;
+    border-top:1px solid var(--colorLineaSeparadora);
+    background-color:var(--colorBackRelatedPosts);
+}
+
+.relatedPost h1 {
+    margin-bottom:10px;
+}
+
+.relatedPost p {
+    line-height:1.5em;
+}
+
+#share {
+    border:4px solid #ddd;
+    background-color:#eee;
+    padding:10px;
+    border-radius:10px;
+    width:40%;
+    display:flex;
+    gap:10px;
+
+}
+
+#share .title {
+    margin-bottom:10px;
+
+}
+
+#share .network  {
+    display:inline-block;
+}
+
+#share .network img {
+    max-width:100%;
+    max-height:70px;
+    display:block;
+    transition: all 200ms ease-in-out;
+}
+
+#share .network img:hover {
+    transform:scale(1.2);
+}
+
+
+
+
+@media screen and (max-width: 767px) {
+    #body {
+        width:90%;
+        margin:0 auto;
+    }
+    
+    .imagen {
+        width:100%;
+        margin:0 auto;
+        margin-bottom:10px;
+    }
+    #share {
+        width:100%;
+    }
+    #share .title {
+        font-size:10pt;
+    }
+
+    figure.wp-block-image {
+        width:100%;
+    }
+}

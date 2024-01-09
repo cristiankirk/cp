@@ -1,0 +1,8 @@
+.tituloCategoria {
+    padding:20px;
+    font-size:18pt;
+    font-weight:bold;
+    text-transform:uppercase;
+    background-color:var(--color3);
+    color:var(--color1);
+  }
