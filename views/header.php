@@ -6,7 +6,7 @@
 
   <title>c:prensa | <?php echo $title; ?></title>
   
-  <meta name="description" content="Chivilcoy bajo Concepto Prensa">
+  <meta name="description" content="Concepto Prensa">
   <meta name="author" content="Cristian Kirk">
 
   <?php if (isset($metaFacebook)) { 
