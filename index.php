@@ -17,16 +17,22 @@ $posts = array_merge($postsSticky,$postsNoSticky);
                 <div class="featured1_container" style="cursor:pointer;" onClick='link(event,"articulo?<?php echo formatDate($posts[0]->date); ?>/<?=$posts[0]->slug?>-<?=$posts[0]->id?>");' title="Leer artículo">
                     <div class="texto">
                     <h2 class="titulo"><?php echo $posts[0]->title->rendered; ?></h2>
-                    <p class="copete"><p><?php echo $posts[0]->excerpt->rendered; ?></p>
+                    <p class="copete"><?php echo strip_tags($posts[0]->excerpt->rendered); ?></p>
                     <h4 class="fecha"><?php echo formatDate($posts[0]->date); ?></h4>
                     <a href="#" class="boton">Leer nota</a>
-                        <time class="readingTime">
+
+                        <?php renderFuente($posts[0]->acf->fuente,"data") ?>
+
+                        <?php renderFoto($posts[0]->acf->fotografia,"data") ?>
+
+                        <time class="data">
                             <i class="fa-solid fa-clock"></i>
                             <span>
-                                Tiempo estimado de lectura:
+                                Tiempo estimado de lectura:<br>
                                 <b><?= renderTiempoEstimadoDeLectura($posts[0]->content->rendered) ?></b>
                             </span>
                         </time>
+
                     </div>
                     <?php $img = getMedia($urlMedia . '/' . $posts[0]->featured_media); ?>
                     <img src="<?php echo $img; ?>">
@@ -41,12 +47,14 @@ $posts = array_merge($postsSticky,$postsNoSticky);
                     <img src="<?php echo $img; ?>">
                     <div class="texto">
                         <h2 class="titulo"><?php echo $posts[1]->title->rendered; ?></h2>
-                        <h3 class="categoria"><?php echo $categorias[$posts[1]->categories[0]]; ?></h3>
+                        <h3 class="categoria"><?php echo $categorias[$posts[1]->categories[0]]; ?></h3> |
                         <h4 class="fecha"><?php echo formatDate($posts[1]->date); ?></h4>
-                        <time class="readingTime">
+                        <?php renderFuente($posts[1]->acf->fuente,"data") ?>
+                        <?php renderFoto($posts[1]->acf->fotografia,"data") ?>
+                        <time class="data">
                             <i class="fa-solid fa-clock"></i>
                             <span>
-                                Tiempo estimado de lectura:
+                                Tiempo estimado de lectura:<br>
                                 <b><?= renderTiempoEstimadoDeLectura($posts[1]->content->rendered) ?></b>
                             </span>
                         </time>
@@ -58,12 +66,14 @@ $posts = array_merge($postsSticky,$postsNoSticky);
                     <img src="<?php echo $img; ?>">
                     <div class="texto">
                         <h2 class="titulo"><?php echo $posts[2]->title->rendered; ?></h2>
-                        <h3 class="categoria"><?php echo $categorias[$posts[2]->categories[0]]; ?></h3>
+                        <h3 class="categoria"><?php echo $categorias[$posts[2]->categories[0]]; ?></h3> |
                         <h4 class="fecha"><?php echo formatDate($posts[2]->date); ?></h4>
-                        <time class="readingTime">
+                        <?php renderFuente($posts[2]->acf->fuente,"data") ?>
+                        <?php renderFoto($posts[2]->acf->fotografia,"data") ?>
+                        <time class="data">
                             <i class="fa-solid fa-clock"></i>
                             <span>
-                                Tiempo estimado de lectura:
+                                Tiempo estimado de lectura:<br>
                                 <b><?= renderTiempoEstimadoDeLectura($posts[2]->content->rendered) ?></b>
                             </span>
                         </time>
@@ -75,12 +85,14 @@ $posts = array_merge($postsSticky,$postsNoSticky);
                     <img src="<?php echo $img; ?>">
                     <div class="texto">
                         <h2 class="titulo"><?php echo $posts[3]->title->rendered; ?></h2>
-                        <h3 class="categoria"><?php echo $categorias[$posts[3]->categories[0]]; ?></h3>
+                        <h3 class="categoria"><?php echo $categorias[$posts[3]->categories[0]]; ?></h3> |
                         <h4 class="fecha"><?php echo formatDate($posts[3]->date); ?></h4>
-                        <time class="readingTime">
+                        <?php renderFuente($posts[3]->acf->fuente,"data") ?>
+                        <?php renderFoto($posts[3]->acf->fotografia,"data") ?>
+                        <time class="data">
                             <i class="fa-solid fa-clock"></i>
                             <span>
-                                Tiempo estimado de lectura:
+                                Tiempo estimado de lectura:<br>
                                 <b><?= renderTiempoEstimadoDeLectura($posts[3]->content->rendered) ?></b>
                             </span>
                         </time>
@@ -116,11 +128,12 @@ $posts = array_merge($postsSticky,$postsNoSticky);
                     </h3>
                       <h2 class="titulo"><?=$posts[$i]->title->rendered ?></h2>
                       <p class="copete"><?=$posts[$i]->excerpt->rendered ?></p>
-                      <div class="readingTime2">
-                            <i class="fa-solid fa-clock"></i>
-                            Tiempo estimado de lectura:
-                            <b><?= renderTiempoEstimadoDeLectura($posts[$i]->content->rendered) ?></b>
-                        </div>
+                      <?php renderFuente($posts[$i]->acf->fuente,"data2") ?>
+                      <?php renderFoto($posts[$i]->acf->fotografia,"data2") ?>
+
+                      <div class="data2">
+                            <i class="fa-solid fa-clock"></i>Tiempo estimado de lectura: <b><?=renderTiempoEstimadoDeLectura($posts[$i]->content->rendered) ?></b>
+                       </div>
                   </div>
                  </div>
 
@@ -247,9 +260,19 @@ function loadMorePosts() {
                                     <div class="texto">
                                         <h3 class="volanta">${categoriaDisplay}</h3>
                                         <h2 class="titulo">${post.title.rendered}</h2>
-                                        <p class="copete">${post.excerpt.rendered}</p>
-                                        <div class="readingTime2">
-                                            Tiempo estimado de lectura:
+                                        <p class="copete">${post.excerpt.rendered}</p>`;
+
+                            if (post.acf.fuente !== "") {
+                                nuevoPost += `<fuente class="data2"><i class="fa-solid fa-camera"></i><span>Foto: <b>${post.acf.fuente}</b></span></fuente>`;
+                            }
+
+                            if (post.acf.fotografia !== "") {
+                                nuevoPost += `<fuente class="data2"><i class="fa-solid fa-camera"></i><span>Foto: <b>${post.acf.fotografia}</b></span></fuente>`;
+                            }
+
+                            nuevoPost += `
+                                        <div class="data2">
+                                            <i class="fa-solid fa-clock"></i>Tiempo estimado de lectura:
                                             <b>${renderTiempoEstimadoDeLectura(post.content.rendered)}</b>
                                         </div>
                                     </div>
@@ -257,6 +280,7 @@ function loadMorePosts() {
                             // Append the new post HTML to the 'posts' container
                             document.getElementById('posts').innerHTML += nuevoPost;
                         });
+
                         pageNumber++; // Increment page number for the next request
                     })
                     .catch(error => {

@@ -287,34 +287,39 @@ header img {
   cursor:pointer;
 }
 
-.readingTime {
+.data {
   font-size:8pt;
-  margin-top:1rem;
   padding-top:5px;
   color: #eee;
   display:flex; 
   flex-direction:row;
-  align-items:center;
+  align-items:start;
   gap:5px;
  }
 
- time i {
-  font-size:12pt;
+ .data i {
+  font-size:10pt;
+  display:inline-block;
+  min-height:20px;
  }
 
-.readingTime b  {
+.data b  {
   font-size:9pt;
-  display:block;
+  /*display:block;*/
 }
 
-.readingTime2 {
+.data2 {
   font-size:8pt;
   padding-top:5px;
   color:#222;
   display:inline-block;
 }
 
-.readingTime2 b {
+.data2 i {
+  margin-right:5px;
+}
+
+.data2 b {
   font-size:9pt;
   display:inline-block;
 }

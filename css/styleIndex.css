@@ -27,8 +27,6 @@
     display:flex;
     align-items:start;
     justify-content: space-between;
-    gap:10px;
-    
   }
   
   #featured1 div.texto {
@@ -75,10 +73,11 @@
     font-weight:bold;
     padding:10px 25px;
     border-radius:5px;
-    margin-top:2rem;
+    margin-block:1rem;
   }
 
   #featured1 h4.fecha {
+    margin-top:1rem;      
     font-size:10pt;
     color:#aaa;
     font-weight:normal;
@@ -122,12 +121,15 @@
     font-size:10pt;
     color:#aaa;
     font-weight:normal;
+    display:inline-block;
   }
   
   #featured2 h4.fecha {
     font-size:10pt;
     color:#aaa;
     font-weight:normal;
+    display:inline-block;
+    margin-bottom:1rem;
   }
   
   main {

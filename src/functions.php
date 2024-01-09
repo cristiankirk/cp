@@ -97,4 +97,24 @@ function renderTiempoEstimadoDeLectura($text) {
         echo $reading_time_minutes . ":" . $reading_time_seconds_string . " min.";
     }
 }
+
+function renderFuente($fuente,$class) {
+    if ($fuente != "") {
+        $html = "<fuente class='".$class."'>";
+        $html .= "<i class='fa-solid fa-magnifying-glass'></i>";
+        $html .= "<span>Fuente: <b>".$fuente."</b></span>";
+        $html .= "</fuente>";
+        echo $html;
+    }
+}
+
+function renderFoto($foto,$class) {
+    if ($foto != "") {
+        $html = "<fuente class='".$class."'>";
+        $html .= "<i class='fa-solid fa-camera'></i>";
+        $html .= "<span>Foto: <b>".$foto."</b></span>";
+        $html .= "</fuente>";
+        echo $html;
+    }
+}
 ?>
