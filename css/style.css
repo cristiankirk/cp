@@ -133,8 +133,6 @@ header img {
   margin-right:10px;
 }
 
-
-
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -342,6 +340,10 @@ footer {
   padding:0 1rem;
 }
 
+footer span {
+  font-size:9pt;
+}
+
 footer img {
   max-height: 40%;
 }
@@ -354,4 +356,13 @@ footer .categorias {
 
 footer .categorias li {
   display: inline-block;
+}
+
+.ad {
+  min-height:120px;
+  margin-bottom:1rem;
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
 }

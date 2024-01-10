@@ -1,7 +1,7 @@
        <footer>
           <img src="images/logo_footer.png">
           <div class="info">
-                conceptoprensa.com | desarrollado por <b>P11 Estudio</b>
+                conceptoprensa.com | <span class="p11">desarrollado por <b>P11 Estudio</b></span>
           </div>
           <ul class="categorias">
                 <li class="link" onclick='link(event,".");'>Inicio /&nbsp;</li>

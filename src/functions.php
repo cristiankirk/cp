@@ -110,10 +110,10 @@ function renderFuente($fuente,$class) {
 
 function renderFoto($foto,$class) {
     if ($foto != "") {
-        $html = "<fuente class='".$class."'>";
+        $html = "<foto class='".$class."'>";
         $html .= "<i class='fa-solid fa-camera'></i>";
         $html .= "<span>Foto: <b>".$foto."</b></span>";
-        $html .= "</fuente>";
+        $html .= "</foto>";
         echo $html;
     }
 }

@@ -17,6 +17,8 @@ $posts = array_merge($postsSticky,$postsNoSticky);
                 <div class="featured1_container" style="cursor:pointer;" onClick='link(event,"articulo?<?php echo formatDate($posts[0]->date); ?>/<?=$posts[0]->slug?>-<?=$posts[0]->id?>");' title="Leer artículo">
                     <div class="texto">
                     <h2 class="titulo"><?php echo $posts[0]->title->rendered; ?></h2>
+                    <?php $img = getMedia($urlMedia . '/' . $posts[0]->featured_media); ?>
+                    <img src="<?php echo $img; ?>" class="featured1_image_mobile">
                     <p class="copete"><?php echo strip_tags($posts[0]->excerpt->rendered); ?></p>
                     <h4 class="fecha"><?php echo formatDate($posts[0]->date); ?></h4>
                     <a href="#" class="boton">Leer nota</a>
@@ -34,8 +36,7 @@ $posts = array_merge($postsSticky,$postsNoSticky);
                         </time>
 
                     </div>
-                    <?php $img = getMedia($urlMedia . '/' . $posts[0]->featured_media); ?>
-                    <img src="<?php echo $img; ?>">
+                    <img src="<?php echo $img; ?>" class="featured1_image">
                 </div>
             </div>
 
@@ -104,7 +105,9 @@ $posts = array_merge($postsSticky,$postsNoSticky);
 
         <?php if ($flag_publicidad) { ?>
         <section class="ad">
-          PUB
+          <img src="images/ad/ad_bb.jpg" title="Barisone/Barbalace">
+          <img src="images/ad/ad_rehabitar.jpg" title="Rehabitar">
+          <img src="images/ad/ad_djtejo.jpg" title="DJ Tejo">
         </section>
         <?php } ?>
 
@@ -143,7 +146,7 @@ $posts = array_merge($postsSticky,$postsNoSticky);
           </div>
 
           <?php if ($flag_publicidad) { ?>
-          <div id="sidebar">
+          <div id="sidebar" style="display:none;">
               <div class="ad" style="padding-top:0;margin-top:0;">PUB</div>
               <div class="ad">PUB</div>
               <div class="ad">PUB</div>
@@ -155,8 +158,6 @@ $posts = array_merge($postsSticky,$postsNoSticky);
           </div>
           <?php } ?>
           
-
-
         </main>
 
 <script>

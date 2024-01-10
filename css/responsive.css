@@ -21,7 +21,14 @@
     top: -12px;
   }
 
-  .featured1_container img {display:none;}
+  #featured1 img.featured1_image {
+    display:none;
+  }
+  
+  #featured1 div h2.titulo {
+    font-size: 24pt;
+  }
+
   #featured2 {
     display:block;
   }
