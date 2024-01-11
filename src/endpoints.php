@@ -1,5 +1,5 @@
 <?php
-$baseUrl = 'https://conceptoprensa.com/wp/';
+$baseUrl = 'http://localhost/conceptoprensa/wordpress/';
 $urlPostsSticky = $baseUrl.'wp-json/wp/v2/posts?sticky=true';
 $urlPostsNoSticky = $baseUrl.'/wp-json/wp/v2/posts?page=1&per_page=3&sticky=false';
 $urlCategorias = $baseUrl.'wp-json/wp/v2/categories';

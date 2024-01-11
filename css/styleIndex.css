@@ -67,10 +67,12 @@
     border-radius:10px;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
     border:0;
     border:4px solid rgba(255,255,255,0.05);
     background-size: cover;
     background-position: center center;
+    margin-left:1rem;
   }
   
   #featured1 div a.boton {
