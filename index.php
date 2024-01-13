@@ -93,7 +93,7 @@ $posts = array_merge($postsSticky,$postsNoSticky);
                         <time class="data">
                             <i class="fa-solid fa-clock"></i>
                             <span>
-                                Tiempo estimado de lectura:<br>
+                                Tiempo est. de lectura:<br>
                                 <b><?= renderTiempoEstimadoDeLectura($posts[3]->content->rendered) ?></b>
                             </span>
                         </time>
@@ -135,7 +135,7 @@ $posts = array_merge($postsSticky,$postsNoSticky);
                       <?php renderFoto($posts[$i]->acf->fotografia,"data2") ?>
 
                       <div class="data2">
-                            <i class="fa-solid fa-clock"></i>Tiempo estimado de lectura: <b><?=renderTiempoEstimadoDeLectura($posts[$i]->content->rendered) ?></b>
+                            <i class="fa-solid fa-clock"></i>Tiempo est. de lectura: <b><?=renderTiempoEstimadoDeLectura($posts[$i]->content->rendered) ?></b>
                        </div>
                   </div>
                  </div>
@@ -273,7 +273,7 @@ function loadMorePosts() {
 
                             nuevoPost += `
                                         <div class="data2">
-                                            <i class="fa-solid fa-clock"></i>Tiempo estimado de lectura:
+                                            <i class="fa-solid fa-clock"></i>Tiempo est. de lectura:
                                             <b>${renderTiempoEstimadoDeLectura(post.content.rendered)}</b>
                                         </div>
                                     </div>

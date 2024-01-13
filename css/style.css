@@ -119,13 +119,20 @@ header {
   text-align:center;
   width:100%;
   padding:20px 0;
-  background-color:rgba(255,255,255,0.9) !important;
-   backdrop-filter: blur(5px);
+  background-color:rgba(255,255,255,0.9);
+  backdrop-filter: blur(5px);
 }
 
-header img {
+header .logo img {
   width:180px;
+  display:block;
 }
+
+header .logo_mobile img {
+  width:180px;
+  display:none;
+}
+
 
 #headerContainer {
   position:absolute;
@@ -310,7 +317,7 @@ header img {
   font-size:8pt;
   padding-top:5px;
   color:#222;
-  display:inline-block;
+  display:block;
 }
 
 .data2 i {
@@ -340,15 +347,27 @@ footer {
   padding:0 1rem;
 }
 
-footer span {
+footer div.info {
+  letter-spacing:-0.5px;
+  flex: 0 0 auto;
+  margin-left: 1rem;
+}
+
+footer span.p11 {
   font-size:9pt;
+}
+
+footer span.anio {
+  font-size:10pt;
 }
 
 footer img {
   max-height: 40%;
+  flex: 0 0 auto;
 }
 
 footer .categorias {
+  margin-left: auto;
   font-size:10pt;
   list-style-type: none;
   width:30%;

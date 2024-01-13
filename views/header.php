@@ -4,7 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>c:prensa | <?php echo $title; ?></title>
+  <title>
+ <?php if ($title != "") {
+        echo "c:p | " . $title;
+      }  else {
+        echo "concepto:prensa";
+      }
+  ?>
+  </title>
   
   <meta name="description" content="Concepto Prensa">
   <meta name="author" content="Cristian Kirk">
@@ -50,6 +57,7 @@
               </ul>
         </div>
         <div class="logo link" onclick="link(event,'.');"><img src="images/logo_index.png"></div>
+        <div class="logo_mobile link" onclick="link(event,'.');"><img src="images/logo_index_mobile.png"></div>
         <div></div>
       
     </header>

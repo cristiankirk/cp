@@ -40,11 +40,14 @@
   #featured1 div h2.titulo {
     font-size:28pt;
     font-weight:bold;
+    letter-spacing: -1.1px;
   }
   
   #featured1 div p.copete {
     font-size:13pt;
     margin-top:0.7rem;
+    line-height:1.3em;
+    letter-spacing: -0.5px;
   }
   
   #featured1 img.featured1_image {
@@ -202,18 +205,19 @@
   
   .post h2 {
     font-size:22pt;
+    letter-spacing:-1px;
   }
   
   .post h1, .post p {
     line-height:1.5rem;
+    letter-spacing: -0.3px;
   }
   
   #body {
     display:none;
   }
   
-  
-  @media screen and (max-width: 767px) {
+   @media screen and (max-width: 767px) {
     #featured1 img.featured1_image_mobile {
       display:block;
     }

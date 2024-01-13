@@ -1,24 +1,32 @@
 @media only screen and (max-width: 1500px) { #app { width:80%;  } } 
 @media only screen and (max-width: 1200px) { #app { width:90%;  } } 
 @media only screen and (max-width: 900px)  {
-  #app { width:100%; padding:0; }
+  #app { width:100%; padding:0; padding-top:45px;}
   header {
     height: 45px;
     padding:10px;
-    background-color:#fff;
+    padding-top:0.5rem;
+    padding-left:1rem;
+    position:fixed;
+    justify-content: flex-start;
   }
-  header img {
-    object-fit: cover;
-    height: 25px;
-    object-position: bottom;
+
+  header .logo img {
+    display:none;
+  }
+
+  header .logo_mobile img {
+    display:block;
   }
 
 
   #navButtonContainer {
     transform: scale(0.7);
     position: absolute;
-    right: 5px;
-    top: -12px;
+    right: -8px;
+    top: -5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   #featured1 img.featured1_image {
@@ -43,9 +51,9 @@
     width:100%;
   }
   #navCategorias {
-    top: -2px;
+    top: 0;
     transform: scale(0.8);
-    right: -7px;
+    right: -19px;
   }
 
   #titulo {
@@ -53,7 +61,12 @@
   }
 
   footer {
-    gap:25px;
+    gap:1rem;
+    justify-content:flex-start;
+  }
+
+  footer div.info {
+   margin-left: 0;
   }
 
   footer .categorias {
