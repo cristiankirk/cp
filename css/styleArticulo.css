@@ -29,8 +29,8 @@ header {
 
 #content p {
     line-height:1.5em;
-    text-align: justify;
-    /*margin-bottom:20px;*/
+    text-align: left;
+    margin-bottom:20px;
     max-width:75ch;
 }
 
@@ -73,6 +73,7 @@ figure.wp-block-image {
 
 figure.wp-block-image img {
     width:100%;
+    height:auto;
     margin-bottom:0.5rem;
 }
 
