@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home2/concepto/public_html
+    - export DEPLOYPATH=/home/concepto/public_html
     - /bin/cp -R * $DEPLOYPATH
