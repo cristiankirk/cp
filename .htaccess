@@ -6,6 +6,10 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
 
+# Redirect from /wp to root
+RewriteCond %{REQUEST_URI} ^/wp [NC]
+RewriteRule ^(.*)$ /$1 [R=301,L]
+
 # Redirects
 RewriteRule ^articulo$ single.php [L]
 RewriteRule ^categoria$ category.php [L]

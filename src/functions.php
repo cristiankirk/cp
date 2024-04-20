@@ -48,7 +48,7 @@ function formatDate($originalDate) {
 
 function renderCategory($categoria) {
     global $categorias;
-    echo "<span class='category link' onClick='link(event,\"category.php?id=".$categoria."\");'>". $categorias[$categoria]. "</span>";
+    echo "<span class='category link' onClick='link(event,\"categoria?id=".$categoria."\");'>". $categorias[$categoria]. "</span>";
 }
 
 function renderCurrentUrl() {
