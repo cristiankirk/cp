@@ -26,7 +26,7 @@
   <link rel="icon" type="image/x-icon" href="./favicon/favicon.ico">
   <script src="js/jquery/jquery-3.7.1.js"></script>
   <link rel="stylesheet" href="libraries/font-awesome-6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=1">
   
   
 </head>

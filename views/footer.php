@@ -19,7 +19,7 @@
  
  <script src="js/scripts.js"></script>
  
- <link rel="stylesheet" href="css/responsive.css">
+ <link rel="stylesheet" href="css/responsive.css?v=1">
  </body>
  
 </html>
