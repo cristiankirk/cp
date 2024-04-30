@@ -13,3 +13,8 @@ RewriteRule ^(.*)$ /$1 [R=301,L]
 # Redirects
 RewriteRule ^articulo$ single.php [L]
 RewriteRule ^categoria$ category.php [L]
+
+# Enable caching for one hour (3600 seconds)
+<FilesMatch "\.(css|js|jpg|jpeg|png|gif|ico|woff|woff2|ttf)$">
+    Header set Cache-Control "max-age=3600, public"
+</FilesMatch>
