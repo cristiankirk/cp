@@ -18,8 +18,15 @@
   header .logo_mobile img {
     display:block;
   }
+  
+  #redes {
+    display:none;
+  }
 
-
+  #redes-mobile-container {
+    display:block;
+  }
+  
   #navButtonContainer {
     transform: scale(0.7);
     position: absolute;
@@ -51,7 +58,7 @@
     width:100%;
   }
   #navCategorias {
-    top: 0;
+    top: -17px;
     transform: scale(0.8);
     right: -19px;
   }

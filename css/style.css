@@ -1,5 +1,5 @@
 :root {
-    --colorBackground:rgb(240, 240, 240);
+    --colorBackground:rgb(255, 255, 255);
     --colorBotonBack:#9a0073;
     --colorLineaSeparadora: #bbb;
     --colorBackRelatedPosts: rgb(248, 248, 248);
@@ -67,7 +67,7 @@ body {
 
 
 #loader {
-  min-height:100vh;
+  min-height:100dvh;
   min-width:100vw;
   display: grid;
   align-items:center;
@@ -79,12 +79,11 @@ body {
 #loaderContainer {
   position:fixed;
   width:100vw;
-  height:100vh;
+  height:100dvh;
   inset:0;
   display:flex;
   align-items:center;
   justify-content:center;
-
   background-color:#fff;
   color:#000;
   transition: all 200ms ease-in-out;
@@ -138,6 +137,51 @@ header .logo_mobile img {
   position:absolute;
   right:0;
   margin-right:10px;
+  display:flex;
+}
+
+#redes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .8em;
+  margin-right: 1em;
+  font-size: 17pt;
+}
+
+#redes a {
+  text-decoration: none;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  background-color:#aaa;
+  color:#fff;
+  border-radius:50%;
+  padding: .5em;
+  cursor:pointer;
+}
+
+#redes a:hover {
+  background-color:#000;
+}
+
+#redes-mobile-container {
+  display:none;
+}
+
+#redes-mobile {
+  font-size: 18pt;
+  gap: 0.3em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom:.5em;
+  border-bottom:1px solid #444;
+}
+
+#redes-mobile a {
+  color:#eee;
 }
 
 @keyframes spin {
