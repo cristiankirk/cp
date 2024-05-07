@@ -20,7 +20,7 @@ $postsNoSticky = fetch($urlPostsNoSticky);
 $posts = array_merge($postsSticky,$postsNoSticky);
 
 ?>
-      <link rel="stylesheet" href="css/styleIndex.css?v=1">
+      <link rel="stylesheet" href="css/styleIndex.css">
       <div id="body">
 
         <section id="sticky">
