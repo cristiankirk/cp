@@ -154,11 +154,13 @@ header .logo_mobile img {
   display:flex;
   align-items:center;
   justify-content: center;
-  background-color:#aaa;
+  background-color:var(--color4);
   color:#fff;
   border-radius:50%;
   padding: .5em;
   cursor:pointer;
+  min-width: 50px;
+  aspect-ratio: 1;
 }
 
 #redes a:hover {
@@ -215,6 +217,14 @@ header .logo_mobile img {
 #navCategorias li:hover {
   background-color:var(--color5);
   color:#fff;
+}
+
+#navCategorias li:first-child {
+  padding-bottom: 0;
+}
+
+#navCategorias li:first-child:hover {
+  background-color:unset;
 }
 
 .display {
@@ -421,8 +431,9 @@ footer .categorias li {
   display: inline-block;
 }
 
-.ad {
+.ads {
   min-height:120px;
+  margin-top:1rem;
   margin-bottom:1rem;
   max-width:100%;
   display:flex;
@@ -430,7 +441,25 @@ footer .categorias li {
   justify-content: space-between;
 }
 
-.ad img {
+.ads a {
   width: 32%;
   height: auto;
+}
+
+.ads img {
+  width:100%;
+}
+
+.loadingMorePosts {
+  margin:.5em auto;
+  width:50px !important;
+  height:50px;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+
+    background-color:#fff;
+    color:#000;
+    transition: all 200ms ease-in-out;
+  
 }

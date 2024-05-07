@@ -47,7 +47,7 @@ include_once "views/header.php";
           </div>
 
           <?php if ($flag_publicidad) { ?>
-          <div id="sidebar">
+          <div id="sidebar" style="display:none;">
               <div class="ad" style="padding-top:0;margin-top:0;">PUB</div>
               <div class="ad">PUB</div>
               <div class="ad">PUB</div>

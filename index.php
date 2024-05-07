@@ -1,6 +1,17 @@
 <?php
 $title = "";
 
+$ads = [
+    ["bb","https://instagram.com/barsisonebarbalace", "Barisone/Barbalace"],
+    ["rehabitar","https://www.instagram.com/rehabitar.chivilcoy/","Rehabitar Consultorios"],
+    ["djtejo","https://instagram.com/djtejodj", "DJ Tejo"],
+    ["secys","https://secys.org/", "Sindicato de Empleados de Comercio y Servicios"],
+    ["planetafitness","https://instagram.com/planetafitness", "Planeta Fitness"],
+    ["importgroup","#","Import Group"]
+];
+
+shuffle($ads);
+
 include_once "src/config.php";
 include_once "views/header.php";
 
@@ -103,14 +114,15 @@ $posts = array_merge($postsSticky,$postsNoSticky);
 
         </section>
 
-        <?php if ($flag_publicidad) { ?>
-        <section class="ad">
-          <img src="images/ad/ad_bb.jpg" title="Barisone/Barbalace">
-          <img src="images/ad/ad_rehabitar.jpg" title="Rehabitar">
-          <img src="images/ad/ad_djtejo.jpg" title="DJ Tejo">
-        </section>
-        <?php } ?>
-
+        <?php if ($flag_publicidad) {
+            echo '<div class="ads">';
+            for ($i = 0; $i < 3; $i++) {
+                echo '<a href="' . $ads[$i][1] . '" target="_blank" title="'.$ads[$i][2].'"><img src="images/ad/ad_' . $ads[$i][0] . '.jpg"></a>';
+            }
+            echo '</div>';
+            }
+        ?>
+        
         <main>
           <div id="posts">
             <div class="tituloEntrePosts">Lo último</div>
@@ -141,7 +153,18 @@ $posts = array_merge($postsSticky,$postsNoSticky);
                  </div>
 
             <?php } ?>
-         
+
+
+            <?php if ($flag_publicidad) {
+            echo '<div class="ads">';
+            for ($i = 3; $i < 6; $i++) {
+                echo '<a href="' . $ads[$i][1] . '" target="_blank" title="'.$ads[$i][2].'"><img src="images/ad/ad_' . $ads[$i][0] . '.jpg"></a>';
+            }
+            echo '</div>';
+            }
+            ?>
+            
+            <div class="loadingMorePosts"><div class="loader"></div></div>
 
           </div>
 
@@ -197,6 +220,7 @@ function fetchMediaDetails(featuredMediaId) {
 
 
 function loadMorePosts() {
+    const loadingMorePosts = document.querySelector('.loadingMorePosts');
     if (stopLoadingPosts || isLoading) {
         return; // Stop if all posts are loaded or if a request is already in progress
     }
@@ -206,6 +230,7 @@ function loadMorePosts() {
     }
 
     if (document.querySelectorAll('.post').length >= cantidadLimitePosts) {
+        if (loadingMorePosts) { loadingMorePosts.remove();}
         return;
     }
 
@@ -239,6 +264,7 @@ function loadMorePosts() {
                 // Wait for all media fetch promises to resolve
                 Promise.all(mediaPromises)
                     .then(mediaSources => {
+                        if (loadingMorePosts) { loadingMorePosts.remove();}
                         // Loop through posts and construct nuevoPost HTML with media sources
                         posts.forEach((post, index) => {
 
@@ -282,6 +308,8 @@ function loadMorePosts() {
                             document.getElementById('posts').innerHTML += nuevoPost;
                         });
 
+                        document.getElementById('posts').innerHTML += `<div class="loadingMorePosts"><div class="loader"></div></div>`;
+
                         pageNumber++; // Increment page number for the next request
                     })
                     .catch(error => {
@@ -289,6 +317,7 @@ function loadMorePosts() {
                         // Handle error if one of the fetchMediaDetails fails
                     });
             } else {
+                document.querySelector('.loadingMorePosts').remove();
                 stopLoadingPosts = true; // No more posts to load
             }
         },
