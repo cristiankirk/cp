@@ -290,11 +290,11 @@ function loadMorePosts() {
                                         <p class="copete">${post.excerpt.rendered}</p>`;
 
                             if (post.acf.fuente !== "") {
-                                nuevoPost += `<fuente class="data2"><i class="fa-solid fa-camera"></i><span>Foto: <b>${post.acf.fuente}</b></span></fuente>`;
+                                nuevoPost += `<fuente class="data2"><i class="fa-solid fa-camera"></i><span>Fuente: <b>${post.acf.fuente}</b></span></fuente>`;
                             }
 
                             if (post.acf.fotografia !== "") {
-                                nuevoPost += `<fuente class="data2"><i class="fa-solid fa-camera"></i><span>Foto: <b>${post.acf.fotografia}</b></span></fuente>`;
+                                nuevoPost += `<foto class="data2"><i class="fa-solid fa-camera"></i><span>Foto: <b>${post.acf.fotografia}</b></span></foto>`;
                             }
 
                             nuevoPost += `
