@@ -290,7 +290,7 @@ function loadMorePosts() {
                                         <p class="copete">${post.excerpt.rendered}</p>`;
 
                             if (post.acf.fuente !== "") {
-                                nuevoPost += `<fuente class="data2"><i class="fa-solid fa-camera"></i><span>Fuente: <b>${post.acf.fuente}</b></span></fuente>`;
+                                nuevoPost += `<fuente class="data2"><i class="fa-solid fa-magnifying-glass"></i><span>Fuente: <b>${post.acf.fuente}</b></span></fuente>`;
                             }
 
                             if (post.acf.fotografia !== "") {
